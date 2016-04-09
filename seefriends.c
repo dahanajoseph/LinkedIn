@@ -228,36 +228,22 @@ void listFriends(int i, char *user){
 void gotoFriend(char *friend){
     
 
-    FILE *html_ptr;
-    char html_line[300];
-    int html_index = 1;
+    printf("<font color=\"lightgreen\">Content-Type:text/html\n\n</font>");
+    printf("<html>");
+        printf("<head>");
     
-    html_ptr = fopen("seefriends.html", "rt");
+            printf("<title> See a friend page </title>");
+            printf("<link href=\"http://cs.mcgill.ca/~ytamit/global.css\" rel=\"stylesheet\"type=\"text/css\">");
+    
+        printf("</head>");
+        printf("<body>");
+            printf("<h1><center><b></br>See a friend page </b></center></h1></br></br>");
+    
+            printf("<center><i><a href=\"file:///Users/dahanajoseph/public_html/LinkedIn/%s.html\" target=\"_self\"><br/><br/><font face=\"arial\"><font size=\"5\">See %s's page</font></a></i></center>", friend, friend);
+        printf("</body>");
+    printf("</html>");
 
- //   printf("Content-Type:text/html\n\n");
     
-    while(html_index<=33){
-        
-        if(html_index<23){
-            fgets(html_line, 2047, html_ptr);
-            html_index++;
-        }
-        
-        else {
-            printf("%s\n",html_line);
-            fgets(html_line, 2047, html_ptr);
-            html_index++;
-        }
-    }
-    
-    printf("<center><i><a href=\"http://www.cs.mcgill.ca/~djosep13/cgi-bin/%s.html\" target=\"_self\"><br/><br/><font face=\"arial\"><font size=\"5\">See %s's page</font></a></i></center>", friend, friend);
-
-    while(!feof(html_ptr)){
-        printf("%s\n",html_line);
-        fgets(html_line, 2047, html_ptr);
-    }
-    
-    fclose(html_ptr);
     return;
     
 
