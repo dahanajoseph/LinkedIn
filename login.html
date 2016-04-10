@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <title>Login or Register</title>
+    <link href="file:///Users/dahanajoseph/public_html/LinkedIn/login.css" rel="stylesheet" type="text/css">
+    <meta charset="utf-8">
+  </head>
+  
+
+  <body>
+      <br/><br/>
+        <h1>LinkedIn</h1>
+
+      <br/>
+    <table>
+    <tr>
+      <th>
+          Login
+      </th>
+      <th>
+        Register
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <form name="input" action="cgi-bin/login.cgi" method="post">
+          Username: <input type="text" name="user"><br>
+          Password : <input type="text" name="passwd"><br>
+          <input type="submit" value="Login">
+        </form>
+      </td>
+      <td>
+        <form name="input" action="cgi-bin/register.cgi" method="post"><br/>
+          Full Name: <input type="text" name="fullname"><br>
+          Job Description: <input type="text" name="jobdesc"><br>
+          Username: <input type="text" name="user"><br>
+          Password :<input type="text" name="passwd"><br/>
+          <input type="submit" value="Register">
+        </form>
+      </td>
+    </tr>
+  </table>
+    
+  <br/><br/><br/>
+  <a href="./index.html">Back to Home Page</a>
+  </body>
+</html>
+
+
